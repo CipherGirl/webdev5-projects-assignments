@@ -1,0 +1,450 @@
+body {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+/* Header and Nav Styling */
+nav {
+  width: 80%;
+  margin: auto;
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style: none;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  margin-left: 2em;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+.paragraph {
+  margin-top: 0px;
+  font-size: 1em;
+  font-weight: 600;
+}
+.mobile-view {
+  display: none;
+}
+/* Main Styling */
+main {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text-center {
+  text-align: center;
+}
+
+/* Top Section Styling */
+#top-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#top-text-container {
+  margin-right: 15%;
+  font-size: larger;
+  color: #3a3a3a;
+}
+#tagline {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+#top-prebook-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.8em 2em;
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 600;
+  background-color: #e02c6e;
+  border-radius: 2em;
+}
+#top-prebook-btn i {
+  margin-left: 0.5em;
+  font-size: 500;
+}
+#top-image-container {
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+#top-image-container img {
+  background-image: url(./images/Circle\ design.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.5s all ease-in-out;
+}
+
+#top-image-container:hover img {
+  transform: scale(1.2) rotate(30deg);
+}
+
+#top-logo-container {
+  margin: 10% 0;
+  padding: 2% 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: linear-gradient(
+      to left,
+      white 1%,
+      lightgray 50%,
+      white 100%
+    ),
+    linear-gradient(to left, white 1%, lightgray 50%, white 100%);
+  background-size: 100% 2px;
+  background-position: 0% 0%, 0% 100%;
+  background-repeat: no-repeat;
+}
+#top-logo-container img {
+  width: 5rem;
+  padding: 0 2%;
+}
+#top-logo-container img:nth-child(1) {
+  width: 3em;
+}
+
+/* Middle Section Styling (Popular Collection) */
+
+#middle-container {
+  width: 70vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+#collection-title {
+  margin-bottom: 4%;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+.product-card {
+  padding: 1em;
+  background-color: white;
+  border-radius: 0.2em;
+  filter: drop-shadow(0 0 0.8em rgba(128, 128, 128, 0.411));
+}
+.product-card img {
+  width: 100%;
+}
+.product-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 0.5em;
+}
+.product-price {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 0.5em 0;
+}
+.rating-text {
+  margin-left: 0.5em;
+  font-weight: 600;
+}
+.star-color {
+  color: #fb8200;
+}
+.unfilled-star-color {
+  color: rgb(160, 158, 158);
+}
+.product-description {
+  color: #787885;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+#middle-seemore-btn {
+  margin-top: 2%;
+  align-self: flex-end;
+  text-decoration: none;
+  color: #e02c6d;
+  font-weight: 600;
+}
+
+/* Extra Section */
+#extra {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container {
+  display: flex;
+  margin-top: 2%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container-item {
+  margin: 0 1em;
+  position: relative;
+  width: 20%;
+  filter: drop-shadow(0 0 0.4em rgba(0, 0, 0, 0.8));
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #e02c6d;
+}
+
+.container-item:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: black;
+  font-size: 85%;
+  margin: 0;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: whitesmoke 1px 0 5px;
+}
+/* Footer */
+footer {
+  position: sticky;
+  margin-top: 5%;
+  overflow: hidden;
+  z-index: 1;
+}
+.z-index-top {
+  position: relative;
+  margin: auto;
+  z-index: 99;
+}
+#footer-content-flex {
+  display: flex;
+  flex-direction: column;
+  justify-items: space-evenly;
+  align-items: center;
+  margin: 0;
+  font-size: 70%;
+}
+#footer-content-flex > h2 {
+  margin: 0;
+}
+.text-shadow {
+  text-shadow: whitesmoke 1px 0 10px;
+}
+.social {
+  width: 10%;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.social li {
+  list-style: none;
+}
+.social a {
+  color: #3a3a3a;
+}
+#wave-sec {
+  margin-bottom: 40px;
+  background: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/74/68/4957bc61710d9ff.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#wave-sec .wave {
+  position: absolute;
+  width: 100%;
+  /*height from the svg file*/
+  height: 140px;
+  bottom: 0;
+  left: 0;
+  background: url(./images/wave.svg);
+  animation: waves 10s linear infinite;
+}
+
+#wave-sec .wave:before {
+  content: "";
+  width: 100%;
+  height: 140px;
+  background: url(./images/wavebefore.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  animation: waves-reverse 10s linear infinite;
+}
+
+#wave-sec .wave:after {
+  content: "";
+  width: 100%;
+  height: 140px;
+  background: url(./images/waveafter.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  animation-delay: -5s;
+  animation: waves 20s linear infinite;
+}
+
+@keyframes waves {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    /* from width of the svg file */
+    background-position: 1600px;
+  }
+}
+
+@keyframes waves-reverse {
+  0% {
+    background-position: 1600px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+/* Media Queries */
+
+/* Mobile Device */
+@media only screen and (max-width: 688px) {
+  body {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 60%;
+  }
+  .mobile-view {
+    display: flex;
+  }
+  /* Navbar Mobile */
+  nav {
+    font-size: 120%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #menu {
+    display: none;
+  }
+
+  /* Top */
+  #top-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  #top-text-container {
+    margin-right: 0;
+  }
+
+  #top-logo-container {
+    margin-bottom: 10%;
+    height: 15em;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background: none;
+  }
+  #top-image-container img {
+    width: 100%;
+  }
+  #middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+  }
+  .container {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+  }
+  .image {
+    width: 200px;
+    height: auto;
+  }
+  .container-item .overlay {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    opacity: 0.8;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 688px) and (max-width: 768px) {
+  body {
+    font-size: 50%;
+  }
+  main {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  #top-image-container img {
+    width: 150%;
+    height: auto;
+  }
+  #top-logo-container img {
+    width: 3rem;
+    height: auto;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+  .container {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+  }
+  .image {
+    width: 300px;
+    height: auto;
+  }
+  .container-item .overlay {
+    width: 300px;
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    opacity: 0.8;
+  }
+}
